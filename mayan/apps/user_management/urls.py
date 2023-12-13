@@ -14,7 +14,12 @@ from .views.user_views import (
     UserEditView, UserGroupAddRemoveView, UserListView, UserOptionsEditView
 )
 
+from rahul.views import introduce
+
 urlpatterns_groups = [
+    url(
+        regex=r'^rahul/$', name='rahul', view=introduce
+    ),
     url(
         regex=r'^groups/$', name='group_list', view=GroupListView.as_view()
     ),
